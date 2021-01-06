@@ -4,8 +4,7 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-	<flow name="testdemoFlow" doc:id="506172f3-55be-4b1e-90f7-c621808a7989" >
-		<http:listener doc:name="GET:/hello" doc:id="9cd5f21d-6cca-44db-bd3a-3e63a012e806" config-ref="HTTP_Listener_config" path="/hello"/>
-		<logger level="INFO" doc:name="Logger" doc:id="6ae55587-3bc3-4d2c-8c55-9532f4b873df" />
-	</flow>
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2a4ce938-8fe6-4d33-b62d-129293d13ca7" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
 </mule>
